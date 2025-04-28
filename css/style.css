@@ -208,7 +208,7 @@ h1 {
   display: block;
   margin: 0;
   margin-bottom: 8px;
-  color: rgba(106, 106, 106, .75);
+  color: #888888;
   letter-spacing: 0.05em;
   /* 擬似要素 */
   position: relative;
