@@ -189,7 +189,7 @@ h1 {
 }
 /* VISION */
 /* PRODUCT */
-.product-list {
+.card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 24px;
@@ -197,13 +197,13 @@ h1 {
   padding: 0;
   list-style: none;
 }
-.product-item {
+.card-item {
   padding: 16px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(169, 186, 142, .25);
 }
-.product-label {
+.card-label {
   font-size: 12px;
   display: block;
   margin: 0;
@@ -214,7 +214,7 @@ h1 {
   position: relative;
   padding-left: 24px;
 }
-.product-label::before {
+.card-label::before {
   content: "";
   position: absolute;
   top: 50%; /* 縦方向中央 */
@@ -435,7 +435,7 @@ aside p {
     gap: 48px;
   }
   /* PRODUCT */
-  .product-list {
+  .card-list {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   /* ALBUM */
