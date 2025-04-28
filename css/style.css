@@ -22,7 +22,8 @@ a:hover {
 img {
   max-width: 100%;
 }
-p {
+p,
+span {
   margin-top: 24px;
   font-size: 14px;
   font-weight: 400;
@@ -188,52 +189,46 @@ h1 {
 }
 /* VISION */
 /* PRODUCT */
-.portfolio-cards {
+.product-list {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
   margin-top: 24px;
-  font-size: 14px;
-  font-family: 'Noto Sans JP', sans-serif;
+  padding: 0;
   list-style: none;
 }
-/* カードアイテム */
-.card-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
+.product-item {
+  padding: 16px;
+  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .05);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
-/* カード全体をリンクに */
-.card-link {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  font-size: 14px;
-  font-weight: 600;
-  align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
+.product-label {
+  font-size: 12px;
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+  color: rgba(106, 106, 106, .75);
+  letter-spacing: 0.05em;
+  /* 擬似要素 */
+  position: relative;
+  padding-left: 24px;
 }
-/* 矢印 */
-.card-arrow {
-  color: var(--color);
-  font-size: 1.4rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+.product-label::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* 縦方向中央 */
+  left: 0; /* ラベルの左端 */
+  transform: translateY(-50%); /* 垂直方向中央に調整 */
+  width: 8px; /* 横線の長さ */
+  height: 2px; /* 横線の太さ */
+  background-color: #A9BA8E;
 }
-/* ホバー時のエフェクト */
-.card-item:hover,
-.card-item:focus-within {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
-  transform: translateY(-5px);
+.card-title {
+  margin: 0;
+  font-weight: 400;
 }
-.card-item:hover .card-arrow,
-.card-item:focus-within .card-arrow {
-  color: #A9BA8E;
-  transform: translateX(6px);
-}
+
 /* ALBUM */
 .album-link {
   font-size: 16px;
@@ -440,8 +435,8 @@ aside p {
     gap: 48px;
   }
   /* PRODUCT */
-  .portfolio-cards {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   /* ALBUM */
   .album-container {
@@ -482,4 +477,3 @@ aside p {
   /* ALBUM.HTML */
 
 }
-
