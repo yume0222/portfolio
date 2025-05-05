@@ -260,17 +260,6 @@ footer p {
 /* ---------------------------- */
 /* PRODUCT.HTML */
 /* #PRODUCT */
-/* #products {
-  background-image: url(../images/main-bg.jpg);
-  height: 270px;
-  margin-bottom: 48px;
-} */
-/* .page-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 270px;
-} */
 .page-title {
   margin-top: 0;
   padding-bottom: 32px;
@@ -364,11 +353,6 @@ aside p {
 
 /* ---------------------------- */
 /* ALBUM.HTML */
-/* #albums {
-  background-image: url(../images/main-bg.jpg);
-  height: 270px;
-  margin-bottom: 48px;
-} */
 .wrapper > .page-title {
   margin-top: 82px;
 }
@@ -387,8 +371,6 @@ aside p {
   margin-top: 6%;
   margin-bottom: 48px;
 }
-/* サイズが違う要素 */
-
 /* カーソル */
 .grid-item {
   transition: .3s;
@@ -407,6 +389,24 @@ aside p {
 .lum-lightbox-inner img {
   max-width: 120vw;
   max-height: 80vh;
+}
+/* ローディング */
+#loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.79);
+  transition: all 1s;
+}
+.spinner {
+  width: 200px;
+  height: 200px;
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* ---------------------------- */
