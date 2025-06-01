@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/f06f995cfd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ローディング -->
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- header -->
+  <header id="header" class="wrapper">
+    <h1><a href="index.html">My Portfolio</a></h1>
+    <nav>
+      <div class="menu-toggle">
+        <button id="menu-open" class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button id="menu-close" class="btn-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="menu-panel">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+          <li class="menu-item"><a href="#skill" class="menu-link">Skill</a></li>
+          <li class="menu-item"><a href="#history" class="menu-link">History</a></li>
+          <li class="menu-item"><a href="#vision" class="menu-link">Vision</a></li>
+          <li class="menu-item"><a href="#products" class="menu-link">Products</a></li>
+        </ul>
+      </div>
+    </nav>    
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Mainvisual -->
+    <div id="mainvisual">
+      <img src="img/flower.jpg" alt="">
+    </div>
+
+    <!-- About -->
+    <section id="about" class="wrapper">
+      <h2 class="title">About</h2>
+      <p class="name">野依 由芽 / Noyori Yume</p>
+      <p class="text">
+        サイバー大学IT総合学部IT総合学科2年生。<br>
+        独学でプログラミングを学習し、2023年3月から未経験でWebデザイナーのアルバイトに取り組んでおり、AdobeXDで1からデザインを組みHTMLやCSS、JavaScriptでコーディングをしています。<br>
+        私の強みは、能動的に行動できることです。<br>
+        アルバイト先は少人数で自律的に業務を進める事が歓迎されていたため、全て自分で調べ解決するよう常に努力しました。<br>
+        その結果、社員の方にも何度も挑戦して自分で解決することできるという点を高く評価いただきました。<br>
+        能動的に行動できる強みを活かし、知識やスキルを磨き続け、業務を遂行していく所存です。
+      </p>
+      <p class="text">
+        <a href="https://github.com/yume0222" class="link">git hub</a>
+      </p>
+    </section>
+
+    <!-- Skill -->
+    <section id="skill" class="wrapper">
+      <h2 class="title">Skill</h2>
+      <dl>
+        <dt>Tool</dt>
+        <dd>Adobe XD, AWS Cloud9, GitHub</dd>
+        <dt class="margin-t">Programming</dt>
+        <dd>HTML, CSS, JavaScript, PHP, Laravel</dd>
+      </dl>
+    </section>
+
+    <!-- Product -->
+    <section id="products" class="wrapper">
+      <h2 class="title">Products</h2>
+      <div class="grid">
+        <div class="grid__item">
+          <a href="https://birdapp-bcc9e7950994.herokuapp.com/" target="_blank" class="grid__link">
+            <img src="img/bird.jpg" alt="" class="grid__image">
+            <p class="grid__title">鳥好きのためのアプリ</p>
+          </a>
+        </div>
+        <div class="grid__item">
+          <a href="https://yume0222.github.io/store-menu-copy/" target="_blank" class="grid__link">
+            <img src="img/store-menu.jpg" alt="" class="grid__image">
+            <p class="grid__title">code-jump模写+α</p>
+          </a>
+        </div>
+        <div class="grid__item">
+          <a href="https://yume0222.github.io/lp-menu-copy/" target="_blank" class="grid__link">
+            <img src="img/lp-menu.jpg" alt="" class="grid__image">
+            <p class="grid__title">code-jump模写</p>
+          </a>
+        </div>
+        <div class="grid__item">
+          <a href="https://yume0222.github.io/media-menu-copy/" target="_blank" class="grid__link">
+            <img src="img/media-menu.jpg" alt="" class="grid__image">
+            <p class="grid__title">code-jump模写</p>
+          </a>
+        </div>
+        <div class="grid__item">
+          <a href="https://yume0222.github.io/gallery-menu-copy/" target="_blank" class="grid__link">
+            <img src="img/gallery-menu.jpg" alt="" class="grid__image">
+            <p class="grid__title">code-jump模写</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section id="history" class="wrapper">
+      <h2 class="title">History</h2>
+      <dl>
+        <dt>2023.2</dt>
+        <dd>ITパスポート試験 合格</dd>
+        <dt>2023.3</dt>
+        <dd>Webデザイナーのアルバイトを始める</dd>
+        <dt>2023.4</dt>
+        <dd>サイバー大学IT総合学部IT総合学科 入学</dd>
+        <dt>2024.6</dt>
+        <dd>プログラミングスクールにて3ヶ月間バックエンドの基礎を学習</dd>
+        <dt>2028.3</dt>
+        <dd>サイバー大学IT総合学部IT総合学科 卒業見込</dd>
+      </dl>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision" class="wrapper">
+      <h2 class="title">Vision</h2>
+      <p>
+        プログラミングに興味を持ったきっかけは、YouTubeでプログラミングの魅力に触れたことです。<br>
+        何度も挫折しそうになりましたが、諦めずに取り組み続けるうちに、コードを少しずつ積み上げ完成に近づいていく過程にワクワクするようになりました。<br>
+        また、わからないことがあれば調べ、新しい技術を習得できたときの達成感は大きく、それがさらに学ぶ意欲へとつながっています。<br>
+        この楽しさを原動力に、日々スキルを磨き続け、価値のある人材へと成長していきたいと考えています。<br>
+        知識や経験はまだ十分ではありませんが、コーディングは時間を忘れるほど夢中になれるほど楽しく、もっとスキルを高めたいと強く思っています。<br>
+        インターンを通じて積極的に行動し、さまざまな経験を積みながら成長していきたいです。
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 Noyori Yume</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

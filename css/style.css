@@ -1,0 +1,286 @@
+@charset 'utf-8';
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+  /* スムーズスクロール */
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--color);
+  font-size: .9rem;
+  font-family: var(--text-font);
+  line-height: 1.8;
+  letter-spacing: .05rem;
+}
+:root {
+  --color: #24292E;
+  --title-font: "Raleway", serif;
+  --text-font: "Noto Sans JP", serif;
+}
+section {
+  /* スムーズスクロール */
+  scroll-margin-top: 80px;
+}
+a {
+  color: var(--color);
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.title {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ローディング */
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background-color: #f1eee4;
+  transition: 1s ease;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  background-color: #a9ba8e;
+  border-radius: 50%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+@keyframes sk-scaleout {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 0;
+  }
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h1 {
+  font-size: 1.75rem;
+  font-family: var(--title-font);
+  font-weight: normal;
+}
+.menu-toggle {
+  display: inline-block;
+}
+#menu-open,
+#menu-close {
+  color: var(--color);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#menu-close {
+  display: none;
+}
+#menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: max(32vw, 20rem);
+  height: 100vh;
+  background-color: var(--color);
+  padding-top: 96px;
+  text-align: center;
+  translate: -100vw;
+}
+.menu-item {
+  opacity: 0;
+}
+.menu-item + .menu-item {
+  margin-top: 16px;
+}
+.menu-list a {
+  color: #ffffff;
+}
+
+/* ホバーで伸びるライン */
+.menu-item a {
+  position: relative;
+}
+.menu-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color);
+  scale: 0;
+  transition: scale .5s;
+}
+.menu-item a:hover::after {
+  scale: 1;
+}
+.menu-item a.white-after::after {
+  background-color: #ffffff;
+}
+
+/* Mainvisual */
+#mainvisual img {
+  width: 100%;
+  height: 420px;
+}
+
+/* About */
+#about {
+  margin-top: 80px;
+}
+.text {
+  margin-top: 30px;
+}
+.link {
+  text-decoration: underline;
+}
+
+/* Skill */
+#skill {
+  margin-top: 70px;
+}
+.margin-t {
+  margin-top: 8px;
+}
+
+/* Products */
+#products {
+  margin-top: 70px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px;
+}
+.grid__title {
+  text-align: center;
+}
+.grid__image {
+  aspect-ratio: 4 / 3;
+}
+
+/* History */
+#history {
+  margin-top: 90px;
+}
+
+/* Vision */
+#vision {
+  margin-top: 70px;
+}
+
+/* Footer */
+#footer {
+  margin-top: 70px;
+  padding: 10px 0;
+  background-color: var(--color);
+  color: #ffffff;
+  font-size: .5rem;
+  text-align: center;
+}
+
+/* PC表示 */
+@media (min-width: 768px) {
+  /* 共通部分 */
+  .title {
+    margin-bottom: 40px;
+  }
+
+  #menu-panel {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: initial;
+    padding-top: initial;
+    text-align: initial;
+    translate: 0;
+  }
+  .menu-list {
+    display: flex;
+    gap: 30px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .menu-item {
+    opacity: 1;
+  }
+  .menu-item + .menu-item {
+    margin-top: 0;
+  }
+  .menu-list a {
+    color: var(--color);
+  }
+
+  /* Skill */
+  #skill {
+    margin-top: 130px;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  dt {
+    width: 20%;
+    padding: 8px;
+  }
+  dd {
+    width: 80%;
+    padding: 8px;
+  }
+  .margin-t {
+    margin-top: 0;
+  }
+
+  /* Products */
+  #products {
+    margin-top: 130px;
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* History */
+  #history {
+    margin-top: 150px;
+  }
+
+  /* Vision */
+  #vision {
+    margin-top: 130px;
+  }
+
+  /* Footer */
+  #footer {
+    margin-top: 130px;
+  }
+}
