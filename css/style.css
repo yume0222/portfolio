@@ -168,8 +168,11 @@ h1 {
 #skill {
   margin-top: 70px;
 }
-.margin-t {
+dt {
   margin-top: 8px;
+}
+dt:first-of-type {
+  margin-top: 0;
 }
 
 /* Products */
@@ -251,14 +254,12 @@ h1 {
   }
   dt {
     width: 20%;
+    margin-top: 0;
     padding: 8px;
   }
   dd {
     width: 80%;
     padding: 8px;
-  }
-  .margin-t {
-    margin-top: 0;
   }
 
   /* Products */
