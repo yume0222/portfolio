@@ -9,11 +9,9 @@ const nav = document.querySelector('.main-nav');
 const menuItems = document.querySelectorAll('.main-nav__item');
 const links = document.querySelectorAll('header a');
 const hamburger = document.querySelector('.hamburger');
-const mask = document.querySelector('#mask');
 const menuClose = () => {
   hamburger.classList.remove('open');
   nav.classList.remove('open');
-  mask.classList.remove('open');
   menuItems.forEach((menuItem) => {
     menuItem.animate(
       {
@@ -31,7 +29,6 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   if (hamburger.classList.contains('open')) {
     nav.classList.add('open');
-    mask.classList.add('open');
     menuItems.forEach((menuItem, index) => {
       menuItem.animate(
         {
