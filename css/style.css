@@ -79,7 +79,7 @@ li {
 
 /* Header */
 #header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 10;
@@ -90,9 +90,7 @@ li {
 .header-inner {
   display: flex;
   justify-content: space-between;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 4%;
+  align-items: center;
 }
 h1 {
   font-size: 1.75rem;
@@ -110,12 +108,18 @@ h1 {
   padding-top: 96px;
   text-align: center;
   translate: -100vw;
+  transition: 1.4s ease;
+}
+.main-nav.open {
+  translate: 0;
+}
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .main-nav__item {
   opacity: 0;
-}
-.main-nav__item + .main-nav__item {
-  margin-top: 16px;
 }
 .main-nav__link {
   color: #ffffff;
@@ -126,6 +130,7 @@ h1 {
   width: 42px;
   height: 42px;
   cursor: pointer;
+  transition: .5s;
 }
 .hamburger span {
   position: absolute;
@@ -167,6 +172,7 @@ h1 {
   z-index: -10;
   background-color: var(--color);
   opacity: .8;
+  transition: .5s;
 }
 /* ホバーで伸びるライン */
 .main-nav__link {
@@ -256,6 +262,34 @@ dt:first-of-type {
   /* 共通部分 */
   .title {
     margin-bottom: 40px;
+  }
+
+  /* Header */
+  .main-nav {
+    position: initial;
+    top: auto;
+    left: auto;
+    width: initial;
+    height: initial;
+    background-color: #ffffff;
+    padding-top: 0;
+    text-align: initial;
+    translate: initial;
+    transition: initial;
+  }
+  .main-nav__list {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .main-nav__link {
+    color: var(--color);
+  }
+  .hamburger {
+    display: none;
+  }
+  /* ホバーで伸びるライン */
+  .main-nav__link::after {
+    background-color: var(--color);
   }
 
   /* Skill */
