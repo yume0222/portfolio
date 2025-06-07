@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/f06f995cfd.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- ローディング -->
@@ -16,27 +15,37 @@
   </div>
 
   <!-- header -->
-  <header id="header" class="wrapper">
-    <h1><a href="index.html">My Portfolio</a></h1>
-    <nav>
-      <div class="menu-toggle">
-        <button id="menu-open" class="btn-menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <button id="menu-close" class="btn-menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div id="menu-panel">
-        <ul class="menu-list">
-          <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
-          <li class="menu-item"><a href="#skill" class="menu-link">Skill</a></li>
-          <li class="menu-item"><a href="#history" class="menu-link">History</a></li>
-          <li class="menu-item"><a href="#vision" class="menu-link">Vision</a></li>
-          <li class="menu-item"><a href="#products" class="menu-link">Products</a></li>
+  <header id="header">
+    <div class="header-inner">
+      <h1>
+        <a href="index.html">My Portfolio</a>
+      </h1>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#about" class="main-nav__link">About</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#skill" class="main-nav__link">Skill</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#history" class="main-nav__link">History</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#vision" class="main-nav__link">Vision</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#products" class="main-nav__link">Products</a>
+          </li>
         </ul>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </nav>    
+      <div id="mask"></div> 
+    </div>
   </header>
 
   <!-- Main -->
@@ -89,6 +98,12 @@
           <a href="https://yume0222.github.io/store-menu-copy/" target="_blank" class="grid__link">
             <img src="img/store-menu.jpg" alt="" class="grid__image">
             <p class="grid__title">code-jump模写+α</p>
+          </a>
+        </div>
+        <div class="grid__item">
+          <a href="https://yume0222.github.io/corporate-menu-copy/" target="_blank" class="grid__link">
+            <img src="img/corporate-menu.jpg" alt="" class="grid__image">
+            <p class="grid__title">code-jump模写</p>
           </a>
         </div>
         <div class="grid__item">
