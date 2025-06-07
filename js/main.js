@@ -9,23 +9,29 @@ const nav = document.querySelector('.main-nav');
 const menuItems = document.querySelectorAll('.main-nav__item');
 const links = document.querySelectorAll('header a');
 const hamburger = document.querySelector('.hamburger');
-const menuOptions = {
-  duration: 1400,
-  easing: 'ease',
-  fill: 'forwards',
-};
+const mask = document.querySelector('#mask');
 const menuClose = () => {
+  hamburger.classList.remove('open');
+  nav.classList.remove('open');
   mask.classList.remove('open');
-  nav.animate({translate: [0, '-100vw']}, menuOptions);
   menuItems.forEach((menuItem) => {
-    menuItem.animate({opacity: [0, 1], menuOptions});
+    menuItem.animate(
+      {
+        opacity: [0, 1],
+      },
+      {
+        duration: 1400,
+        easing: 'ease',
+        fill: 'forwards',
+      }
+    );
   });
-}
+};
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   if (hamburger.classList.contains('open')) {
+    nav.classList.add('open');
     mask.classList.add('open');
-    nav.animate({translate: ['-100vw', 0]}, menuOptions);
     menuItems.forEach((menuItem, index) => {
       menuItem.animate(
         {
@@ -44,7 +50,6 @@ hamburger.addEventListener('click', () => {
     menuClose();
   }
 });
-// メニューを閉じる
 mask.addEventListener('click', () => {
   menuClose();
 });
@@ -52,4 +57,12 @@ links.forEach((link) => {
   link.addEventListener('click', () => {
     menuClose();
   });
+});
+// 画面読み込み時
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    if (hamburger.classList.contains('open')) {
+      menuClose();
+    }
+  }
 });
