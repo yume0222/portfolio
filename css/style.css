@@ -118,9 +118,6 @@ h1 {
   flex-direction: column;
   gap: 16px;
 }
-.main-nav__item {
-  opacity: 0;
-}
 .main-nav__link {
   color: #ffffff;
 }
