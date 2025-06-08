@@ -146,9 +146,9 @@ h1 {
 .hamburger span:nth-child(3) {
   top: 31px;
 }
-/* .hamburger.open span {
+.hamburger.open span {
   background-color: #ffffff;
-} */
+}
 .hamburger.open span:nth-child(1) {
   top: 21px;
   left: 6px;
@@ -159,7 +159,7 @@ h1 {
   top: 21px;
   transform: rotate(45deg);
 }
-/* #mask {
+#mask {
   display: none;
 }
 #mask.open {
@@ -170,7 +170,7 @@ h1 {
   background-color: var(--color);
   opacity: .8;
   transition: .5s;
-} */
+}
 /* ホバーで伸びるライン */
 .main-nav__link {
   position: relative;
@@ -271,7 +271,7 @@ dt:first-of-type {
     background-color: #ffffff;
     padding-top: 0;
     text-align: initial;
-    translate: initial;
+    translate: 0;
     transition: initial;
   }
   .main-nav__list {
@@ -281,7 +281,8 @@ dt:first-of-type {
   .main-nav__link {
     color: var(--color);
   }
-  .hamburger {
+  .hamburger,
+  #mask.open {
     display: none;
   }
   /* ホバーで伸びるライン */
