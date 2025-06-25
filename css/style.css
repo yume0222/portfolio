@@ -258,7 +258,7 @@ dt:first-of-type {
 @media (min-width: 768px) {
   /* 共通部分 */
   .title {
-    margin-bottom: 40px;
+    margin-bottom: 65px;
   }
 
   /* Header */
